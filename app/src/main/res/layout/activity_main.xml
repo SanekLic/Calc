@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".AndroidActivity">
 
     <ScrollView
-        android:id="@+id/scrollView"
+        android:id="@+id/history_scroll_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -15,14 +15,14 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:fillViewport="true"
-        app:layout_constraintBottom_toTopOf="@+id/ValueTextView"
+        app:layout_constraintBottom_toTopOf="@+id/value_text_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
 
         <TextView
-            android:id="@+id/ValueHistoryTextView"
+            android:id="@+id/value_history_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
@@ -35,7 +35,7 @@
     </ScrollView>
 
     <TextView
-        android:id="@+id/ValueTextView"
+        android:id="@+id/value_text_view"
         android:layout_width="0dp"
         android:layout_height="54dp"
         android:layout_marginStart="8dp"
@@ -47,13 +47,13 @@
         android:textSize="32sp"
         android:typeface="monospace"
         app:autoSizeTextType="uniform"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayoutNumber"
+        app:layout_constraintBottom_toTopOf="@+id/number_constraint_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:text="13456" />
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayoutNumber"
+        android:id="@+id/number_constraint_layout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -65,284 +65,284 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <android.support.constraint.Guideline
-            android:id="@+id/guidelineV25"
+            android:id="@+id/vertical_25_percent_guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.25" />
 
         <android.support.constraint.Guideline
-            android:id="@+id/guidelineV50"
+            android:id="@+id/vertical_50_percent_guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.5" />
 
         <android.support.constraint.Guideline
-            android:id="@+id/guidelineV75"
+            android:id="@+id/vertical_75_percent_guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.75" />
 
         <android.support.constraint.Guideline
-            android:id="@+id/guidelineH20"
+            android:id="@+id/horizontal_20_percent_guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.2" />
 
         <android.support.constraint.Guideline
-            android:id="@+id/guidelineH40"
+            android:id="@+id/horizontal_40_percent_guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.4" />
 
         <android.support.constraint.Guideline
-            android:id="@+id/guidelineH60"
+            android:id="@+id/horizontal_60_percent_guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.6" />
 
         <android.support.constraint.Guideline
-            android:id="@+id/guidelineH80"
+            android:id="@+id/horizontal_80_percent_guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.8" />
 
         <Button
-            android:id="@+id/buttonCE"
+            android:id="@+id/ce_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:onClick="onClickButtonCE"
+            android:onClick="onClickCEButton"
             android:text="CE"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/guidelineH20"
-            app:layout_constraintEnd_toStartOf="@+id/guidelineV25"
+            app:layout_constraintBottom_toTopOf="@+id/horizontal_20_percent_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/vertical_25_percent_guideline"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/buttonC"
+            android:id="@+id/c_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:onClick="onClickButtonC"
+            android:onClick="onClickCButton"
             android:text="C"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/guidelineH20"
-            app:layout_constraintEnd_toStartOf="@+id/guidelineV50"
-            app:layout_constraintStart_toStartOf="@+id/guidelineV25"
+            app:layout_constraintBottom_toTopOf="@+id/horizontal_20_percent_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/vertical_50_percent_guideline"
+            app:layout_constraintStart_toStartOf="@+id/vertical_25_percent_guideline"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/buttonDel"
+            android:id="@+id/del_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:onClick="onClickButtonDel"
+            android:onClick="onClickDelButton"
             android:text="del"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/guidelineH20"
-            app:layout_constraintEnd_toStartOf="@+id/guidelineV75"
-            app:layout_constraintStart_toStartOf="@+id/guidelineV50"
+            app:layout_constraintBottom_toTopOf="@+id/horizontal_20_percent_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/vertical_75_percent_guideline"
+            app:layout_constraintStart_toStartOf="@+id/vertical_50_percent_guideline"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/buttonDiv"
+            android:id="@+id/div_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:onClick="onClickButtonOperation"
             android:text="/"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/guidelineH20"
+            app:layout_constraintBottom_toTopOf="@+id/horizontal_20_percent_guideline"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guidelineV75"
+            app:layout_constraintStart_toStartOf="@+id/vertical_75_percent_guideline"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/seven_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:onClick="onClickButtonNumber"
+            android:onClick="onClickNumberButton"
             android:text="7"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/guidelineH40"
-            app:layout_constraintEnd_toStartOf="@+id/guidelineV25"
+            app:layout_constraintBottom_toTopOf="@+id/horizontal_40_percent_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/vertical_25_percent_guideline"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guidelineH20" />
+            app:layout_constraintTop_toTopOf="@+id/horizontal_20_percent_guideline" />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/eight_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:onClick="onClickButtonNumber"
+            android:onClick="onClickNumberButton"
             android:text="8"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/guidelineH40"
-            app:layout_constraintEnd_toStartOf="@+id/guidelineV50"
-            app:layout_constraintStart_toStartOf="@+id/guidelineV25"
-            app:layout_constraintTop_toTopOf="@+id/guidelineH20" />
+            app:layout_constraintBottom_toTopOf="@+id/horizontal_40_percent_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/vertical_50_percent_guideline"
+            app:layout_constraintStart_toStartOf="@+id/vertical_25_percent_guideline"
+            app:layout_constraintTop_toTopOf="@+id/horizontal_20_percent_guideline" />
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/nine_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:onClick="onClickButtonNumber"
+            android:onClick="onClickNumberButton"
             android:text="9"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/guidelineH40"
-            app:layout_constraintEnd_toStartOf="@+id/guidelineV75"
-            app:layout_constraintStart_toStartOf="@+id/guidelineV50"
-            app:layout_constraintTop_toTopOf="@+id/guidelineH20" />
+            app:layout_constraintBottom_toTopOf="@+id/horizontal_40_percent_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/vertical_75_percent_guideline"
+            app:layout_constraintStart_toStartOf="@+id/vertical_50_percent_guideline"
+            app:layout_constraintTop_toTopOf="@+id/horizontal_20_percent_guideline" />
 
         <Button
-            android:id="@+id/buttonMul"
+            android:id="@+id/mul_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:onClick="onClickButtonOperation"
             android:text="*"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/guidelineH40"
+            app:layout_constraintBottom_toTopOf="@+id/horizontal_40_percent_guideline"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guidelineV75"
-            app:layout_constraintTop_toTopOf="@+id/guidelineH20" />
+            app:layout_constraintStart_toStartOf="@+id/vertical_75_percent_guideline"
+            app:layout_constraintTop_toTopOf="@+id/horizontal_20_percent_guideline" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/four_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:onClick="onClickButtonNumber"
+            android:onClick="onClickNumberButton"
             android:text="4"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/guidelineH60"
-            app:layout_constraintEnd_toStartOf="@+id/guidelineV25"
+            app:layout_constraintBottom_toTopOf="@+id/horizontal_60_percent_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/vertical_25_percent_guideline"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guidelineH40" />
+            app:layout_constraintTop_toTopOf="@+id/horizontal_40_percent_guideline" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/five_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:onClick="onClickButtonNumber"
+            android:onClick="onClickNumberButton"
             android:text="5"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/guidelineH60"
-            app:layout_constraintEnd_toStartOf="@+id/guidelineV50"
-            app:layout_constraintStart_toStartOf="@+id/guidelineV25"
-            app:layout_constraintTop_toTopOf="@+id/guidelineH40" />
+            app:layout_constraintBottom_toTopOf="@+id/horizontal_60_percent_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/vertical_50_percent_guideline"
+            app:layout_constraintStart_toStartOf="@+id/vertical_25_percent_guideline"
+            app:layout_constraintTop_toTopOf="@+id/horizontal_40_percent_guideline" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/six_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:onClick="onClickButtonNumber"
+            android:onClick="onClickNumberButton"
             android:text="6"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/guidelineH60"
-            app:layout_constraintEnd_toStartOf="@+id/guidelineV75"
-            app:layout_constraintStart_toStartOf="@+id/guidelineV50"
-            app:layout_constraintTop_toTopOf="@+id/guidelineH40" />
+            app:layout_constraintBottom_toTopOf="@+id/horizontal_60_percent_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/vertical_75_percent_guideline"
+            app:layout_constraintStart_toStartOf="@+id/vertical_50_percent_guideline"
+            app:layout_constraintTop_toTopOf="@+id/horizontal_40_percent_guideline" />
 
         <Button
-            android:id="@+id/buttonSub"
+            android:id="@+id/sub_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:onClick="onClickButtonOperation"
             android:text="-"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/guidelineH60"
+            app:layout_constraintBottom_toTopOf="@+id/horizontal_60_percent_guideline"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guidelineV75"
-            app:layout_constraintTop_toTopOf="@+id/guidelineH40" />
+            app:layout_constraintStart_toStartOf="@+id/vertical_75_percent_guideline"
+            app:layout_constraintTop_toTopOf="@+id/horizontal_40_percent_guideline" />
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/one_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:onClick="onClickButtonNumber"
+            android:onClick="onClickNumberButton"
             android:text="1"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/guidelineH80"
-            app:layout_constraintEnd_toStartOf="@+id/guidelineV25"
+            app:layout_constraintBottom_toTopOf="@+id/horizontal_80_percent_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/vertical_25_percent_guideline"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guidelineH60" />
+            app:layout_constraintTop_toTopOf="@+id/horizontal_60_percent_guideline" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/two_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:onClick="onClickButtonNumber"
+            android:onClick="onClickNumberButton"
             android:text="2"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/guidelineH80"
-            app:layout_constraintEnd_toStartOf="@+id/guidelineV50"
-            app:layout_constraintStart_toStartOf="@+id/guidelineV25"
-            app:layout_constraintTop_toTopOf="@+id/guidelineH60" />
+            app:layout_constraintBottom_toTopOf="@+id/horizontal_80_percent_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/vertical_50_percent_guideline"
+            app:layout_constraintStart_toStartOf="@+id/vertical_25_percent_guideline"
+            app:layout_constraintTop_toTopOf="@+id/horizontal_60_percent_guideline" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/three_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:onClick="onClickButtonNumber"
+            android:onClick="onClickNumberButton"
             android:text="3"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/guidelineH80"
-            app:layout_constraintEnd_toStartOf="@+id/guidelineV75"
-            app:layout_constraintStart_toStartOf="@+id/guidelineV50"
-            app:layout_constraintTop_toTopOf="@+id/guidelineH60" />
+            app:layout_constraintBottom_toTopOf="@+id/horizontal_80_percent_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/vertical_75_percent_guideline"
+            app:layout_constraintStart_toStartOf="@+id/vertical_50_percent_guideline"
+            app:layout_constraintTop_toTopOf="@+id/horizontal_60_percent_guideline" />
 
         <Button
-            android:id="@+id/buttonAdd"
+            android:id="@+id/add_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:onClick="onClickButtonOperation"
             android:text="+"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/guidelineH80"
+            app:layout_constraintBottom_toTopOf="@+id/horizontal_80_percent_guideline"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guidelineV75"
-            app:layout_constraintTop_toTopOf="@+id/guidelineH60" />
+            app:layout_constraintStart_toStartOf="@+id/vertical_75_percent_guideline"
+            app:layout_constraintTop_toTopOf="@+id/horizontal_60_percent_guideline" />
 
         <Button
-            android:id="@+id/buttonNeg"
+            android:id="@+id/neg_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:onClick="onClickButtonNeg"
+            android:onClick="onClickNegButton"
             android:text="±"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/guidelineV25"
+            app:layout_constraintEnd_toStartOf="@+id/vertical_25_percent_guideline"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guidelineH80" />
+            app:layout_constraintTop_toTopOf="@+id/horizontal_80_percent_guideline" />
 
         <Button
-            android:id="@+id/button0"
+            android:id="@+id/zero_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:onClick="onClickButtonNumber"
+            android:onClick="onClickNumberButton"
             android:text="0"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/guidelineV50"
-            app:layout_constraintStart_toStartOf="@+id/guidelineV25"
-            app:layout_constraintTop_toTopOf="@+id/guidelineH80" />
+            app:layout_constraintEnd_toStartOf="@+id/vertical_50_percent_guideline"
+            app:layout_constraintStart_toStartOf="@+id/vertical_25_percent_guideline"
+            app:layout_constraintTop_toTopOf="@+id/horizontal_80_percent_guideline" />
 
         <Button
-            android:id="@+id/buttonPoint"
+            android:id="@+id/point_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:onClick="onClickButtonPoint"
+            android:onClick="onClickPointButton"
             android:text="."
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/guidelineV75"
-            app:layout_constraintStart_toStartOf="@+id/guidelineV50"
-            app:layout_constraintTop_toTopOf="@+id/guidelineH80" />
+            app:layout_constraintEnd_toStartOf="@+id/vertical_75_percent_guideline"
+            app:layout_constraintStart_toStartOf="@+id/vertical_50_percent_guideline"
+            app:layout_constraintTop_toTopOf="@+id/horizontal_80_percent_guideline" />
 
         <Button
-            android:id="@+id/buttonExec"
+            android:id="@+id/exec_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:onClick="onClickButtonExec"
@@ -350,8 +350,8 @@
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guidelineV75"
-            app:layout_constraintTop_toTopOf="@+id/guidelineH80" />
+            app:layout_constraintStart_toStartOf="@+id/vertical_75_percent_guideline"
+            app:layout_constraintTop_toTopOf="@+id/horizontal_80_percent_guideline" />
 
     </android.support.constraint.ConstraintLayout>
 
