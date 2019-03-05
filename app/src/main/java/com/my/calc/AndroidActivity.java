@@ -133,10 +133,14 @@ public class AndroidActivity extends AppCompatActivity {
     }
 
     private boolean isLastOperationAlreadySelected() {
-        return valueHistoryTextView.getText().toString().endsWith(String.valueOf(OPERATION_DEL))
-                || valueHistoryTextView.getText().toString().endsWith(String.valueOf(OPERATION_MUL))
-                || valueHistoryTextView.getText().toString().endsWith(String.valueOf(OPERATION_SUB))
-                || valueHistoryTextView.getText().toString().endsWith(String.valueOf(OPERATION_ADD));
+        return textViewEndWith(OPERATION_DEL)
+                || textViewEndWith(OPERATION_MUL)
+                || textViewEndWith(OPERATION_SUB)
+                || textViewEndWith(OPERATION_ADD);
+    }
+
+    private boolean textViewEndWith(char endChar) {
+        return valueHistoryTextView.getText().toString().endsWith(String.valueOf(endChar));
     }
 
     public void onClickCEButton(View view) {
